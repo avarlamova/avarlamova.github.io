@@ -90,7 +90,6 @@
       ReactCurrentBatchConfig: q,
       ReactCurrentOwner: r,
       IsSomeRendererActing: s,
-      assign: assign,
     };
   i.ReactDebugCurrentFrame = c;
   var ai = {
