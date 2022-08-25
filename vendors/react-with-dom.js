@@ -187,60 +187,7 @@
   // In PROD (or in packages without access to React internals),
   // they are left as they are instead.
 
-  function printWarning(level, format, args) {
-    // When changing this logic, you might want to also
-    // update consoleWithStackDev.www.js as well.
-    {
-      var ReactDebugCurrentFrame = ReactSharedInternals.ReactDebugCurrentFrame;
-      var stack = ReactDebugCurrentFrame.getStackAddendum();
-
-      if (stack !== "") {
-        format += "%s";
-        args = args.concat([stack]);
-      }
-
-      var argsWithFormat = args.map(function (item) {
-        return "" + item;
-      }); // Careful: RN currently depends on this prefix
-
-      argsWithFormat.unshift("Warning: " + format); // We intentionally don't use spread (or .apply) directly because it
-      // breaks IE9: https://github.com/facebook/react/issues/13610
-      // eslint-disable-next-line react-internal/no-production-logging
-
-      Function.prototype.apply.call(console[level], console, argsWithFormat);
-    }
-  }
-
   var didWarnStateUpdateForUnmountedComponent = {};
-
-  function warnNoop(publicInstance, callerName) {
-    {
-      var _constructor = publicInstance.constructor;
-      var componentName =
-        (_constructor && (_constructor.displayName || _constructor.name)) ||
-        "ReactClass";
-      var warningKey = componentName + "." + callerName;
-
-      if (didWarnStateUpdateForUnmountedComponent[warningKey]) {
-        return;
-      }
-
-      error(
-        "Can't call %s on a component that is not yet mounted. " +
-          "This is a no-op, but it might indicate a bug in your application. " +
-          "Instead, assign to `this.state` directly or define a `state = {};` " +
-          "class property with the desired state in the %s component.",
-        callerName,
-        componentName
-      );
-
-      didWarnStateUpdateForUnmountedComponent[warningKey] = true;
-    }
-  }
-  /**
-   * This is the abstract API for an update queue.
-   */
-
   var ReactNoopUpdateQueue = {
     /**
      * Checks whether or not this composite component is mounted.
