@@ -263,11 +263,10 @@
         }
         aR = a > 0 ? Math.floor(1e3 / a) : 5;
       });
-    (u = new MessageChannel()), (aT = u.port2);
-    (u.port1.onmessage = V),
-      (m = function (a) {
-        (aP = a), aO || ((aO = !0), aT.postMessage(null));
-      }),
+    aT = u.port2;
+    (m = function (a) {
+      (aP = a), aO || ((aO = !0), aT.postMessage(null));
+    }),
       (n = function (b, a) {
         aQ = aM(function () {
           b(g());
