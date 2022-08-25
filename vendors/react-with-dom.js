@@ -142,9 +142,7 @@
   for (var k in j) j.hasOwnProperty(k) && O(k, j[k]);
   function t() {}
   t.prototype = d.prototype;
-  var l = (PureComponent.prototype = new t());
-  (l.constructor = PureComponent),
-    assign(l, d.prototype),
+  assign(l, d.prototype),
     (l.isPureReactComponent = !0),
     Object.prototype.hasOwnProperty;
   var aj = !1,
@@ -598,7 +596,6 @@
     },
   }),
     (a.Component = d),
-    (a.PureComponent = PureComponent),
     (a.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = x),
     (a.cloneElement = function (c, d, e) {
       for (
