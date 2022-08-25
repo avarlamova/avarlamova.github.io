@@ -142,9 +142,7 @@
   for (var k in j) j.hasOwnProperty(k) && O(k, j[k]);
   function t() {}
   t.prototype = d.prototype;
-  assign(l, d.prototype),
-    (l.isPureReactComponent = !0),
-    Object.prototype.hasOwnProperty;
+  (l.isPureReactComponent = !0), Object.prototype.hasOwnProperty;
   var aj = !1,
     ak = /\/+/g;
   var ar = 0;
