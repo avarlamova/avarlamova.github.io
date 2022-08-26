@@ -1,0 +1,28 @@
+{
+  "name": "avarlamova.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avarlamova/avarlamova.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avarlamova/avarlamova.github.io/issues"
+  },
+  "homepage": "https://github.com/avarlamova/avarlamova.github.io#readme",
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}
