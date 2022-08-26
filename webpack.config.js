@@ -22,7 +22,7 @@ module.exports = {
             use: [MiniCssExtractPlugin.loader, "css-loader"],
           },
     ],
-},
+}, 
     plugins: [
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, './src/index.html'), // шаблон
