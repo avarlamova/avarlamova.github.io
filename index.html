@@ -1014,20 +1014,20 @@
     }
     function c(d) {
       let e = !1,
-        f = document.querySelector(".header__links");
+        f = document.querySelector(".hd__links");
       d.addEventListener("click", () => {
         (e = !e),
           d.setAttribute("aria-expanded", e ? "true" : "false"),
-          (d.querySelector(".header__menu-text").textContent = e
+          (d.querySelector(".hd__menu-text").textContent = e
             ? "\u0417\u0430\u043A\u0440\u044B\u0442\u044C \u043C\u0435\u043D\u044E"
             : "\u041E\u0442\u043A\u0440\u044B\u0442\u044C \u043C\u0435\u043D\u044E"),
-          f.classList.toggle("header__links_opened", e),
-          f.classList.add("header__links-toggled");
+          f.classList.toggle("hd__links_opened", e),
+          f.classList.add("hd__links-toggled");
       });
     }
     document.addEventListener("DOMContentLoaded", () => {
       Array.from(document.querySelectorAll(".main__devices")).forEach(b),
-        Array.from(document.querySelectorAll(".header__menu")).forEach(c);
+        Array.from(document.querySelectorAll(".hd__menu")).forEach(c);
     });
   </script>
 </html>
