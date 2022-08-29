@@ -45,6 +45,7 @@
         font: inherit;
         vertical-align: baseline;
       }
+      article,
       footer,
       header,
       hgroup,
@@ -657,6 +658,7 @@
               aria-selected="true"
               tabindex="0"
               class="section__tab section__tab_active"
+              id="tab_all"
               aria-controls="panel_all"
               data-id="all"
             >
@@ -666,6 +668,7 @@
               role="tab"
               aria-selected="false"
               class="section__tab"
+              id="tab_kitchen"
               aria-controls="panel_kitchen"
               data-id="kitchen"
             >
@@ -675,6 +678,7 @@
               role="tab"
               aria-selected="false"
               class="section__tab"
+              id="tab_hall"
               aria-controls="panel_hall"
               data-id="hall"
             >
@@ -684,6 +688,7 @@
               role="tab"
               aria-selected="false"
               class="section__tab"
+              id="tab_lights"
               aria-controls="panel_lights"
               data-id="lights"
             >
@@ -693,6 +698,7 @@
               role="tab"
               aria-selected="false"
               class="section__tab"
+              id="tab_cameras"
               aria-controls="panel_cameras"
               data-id="cameras"
             >
@@ -704,6 +710,7 @@
           role="tabpanel"
           class="section__panel"
           aria-hidden="false"
+          id="panel_all"
           aria-labelledby="tab_all"
           data-id="all"
         >
@@ -791,6 +798,7 @@
           role="tabpanel"
           class="section__panel section__panel_hidden"
           aria-hidden="true"
+          id="panel_kitchen"
           aria-labelledby="tab_kitchen"
           data-id="kitchen"
         >
@@ -823,6 +831,7 @@
           role="tabpanel"
           class="section__panel section__panel_hidden"
           aria-hidden="true"
+          id="panel_hall"
           aria-labelledby="tab_hall"
           data-id="hall"
         >
@@ -855,6 +864,7 @@
           role="tabpanel"
           class="section__panel section__panel_hidden"
           aria-hidden="true"
+          id="panel_lights"
           aria-labelledby="tab_lights"
           data-id="lights"
         >
@@ -909,6 +919,7 @@
           role="tabpanel"
           class="section__panel section__panel_hidden"
           aria-hidden="true"
+          id="panel_cameras"
           aria-labelledby="tab_cameras"
           data-id="cameras"
         >
